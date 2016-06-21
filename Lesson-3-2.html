@@ -1,0 +1,23 @@
+ <meta charset="utf-8">
+
+<script type="text/javascript">
+    var x = '#';
+    var y = '\u0020'
+    var i = 0;
+     x += '\u0020' + '#';
+	 y += '#' + '\u0020';
+
+	for (; i < 8; i++){
+		if((i+1) % 2 != 0){
+	    console.log(x + y + '#');	    
+	}
+	    if((i+1) % 2 == 0){
+
+	    console.log(y + x, '#');	    
+	}
+
+	}
+	
+   
+
+</script>
