@@ -2,8 +2,8 @@
 <script >
 // User storage
 	
-var users = [];
-    users = [
+  var users = [];
+      users = [
 	{
 		firstName: 'Dmitry',
 		lastName: 'Bondarchuk',
@@ -22,32 +22,32 @@ var users = [];
 			'83431234567'
 		] 
 	}
-];
-var user = {};
+  ];
 
-var userCount = prompt ('Общее количество пользователей в базе?');
-var i = prompt ('Сколько уже добавлено пользователей в базе?');
-for (; i < userCount; i++){
-  
-    user.firstName = prompt ('Имя:');
-    user.lastName = prompt ('Фамилия:');
+  var user = {};
+  function getUser() {    
+
+    user.firstName = prompt ('Имя:');    
+    user.lastName = prompt ('Фамилия:');    
     user.birthDay = prompt ('Дата рождения:');
+   
     user.phones = [];
       for (var j = 0; j < 2; j++){
           
       user.phones.push (user.phone = prompt ('Телефон:'));
-
       }
-    
+      return user
 
-    users.push (user);
-    
-    }
+  }
 
-for (var r = 0; r < userCount; r++){
+    user[r] = getUser();
+    users.push(user[r]);
+ 
 
-    console.log('Пользователь'+ (r+1) + '\n' + 'Имя:'+ ' ' + "'" + users[r].firstName + "'" + ',', '\n'+'Фамилия:'+ ' ' + "'" + users[r].lastName + "'" + ',', '\n' + 'Дата рождения:'+ ' ' + "'" + users[r].birthDay + "'" + ',','\n' + 'Телефоны:'+ "'" + users[r].phones.join(+' ' + ' ,\n  ') + "'");
+  for (var r = 0; r < users.length; r++){
 
-}
+      console.log('Пользователь'+ (r+1) + '\n' + 'Имя:'+ ' ' + "'" + users[r].firstName + "'" + ',', '\n'+'Фамилия:'+ ' ' + "'" +users[r].lastName + "'" + ',', '\n' + 'Дата рождения:'+ ' ' + "'" + users[r].birthDay + "'" + ',','\n' + 'Телефоны:'+ "'" + users[r].phones.join(+' ' + ' ,\n  ') + "'");
+
+  }
 
 </script>
