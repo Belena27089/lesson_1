@@ -20,6 +20,23 @@
   user = getUser();
   users.push(user);
 
+  // Вывод в CSV формате
+
+  function csvPhormat() {  
+
+    return ('Пользователь'+ (r+1) + ':' + 'Имя:'+ ' ' + "'" + users[r].firstName
+            + "'" + ';' +'Фамилия:'+ ' ' + "'" + users[r].lastName + "'" + ';'
+             + 'Дата рождения:'+ ' ' + "'" + users[r].birthDay + "'" + ';' + 'Телефоны:'+ 
+             "'" + users[r].phones.join(' , ') + "'"+';');
+
+  
+  }
+
+  for (var r = 0; r < users.length; r++){
+
+    console.log(csvPhormat());
+  }
+
 
 
   // функция вывода наименьшего числа
