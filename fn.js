@@ -88,17 +88,18 @@ console.log(countChar('ABBaBbBbGH', 'b'));
 
 function isEven(a) {	
 	
-	if (a === 0) {
+    if (a === 0) {
 
-		return true;
+        return true;
 
-	} 
+    } 
+
     if (a === 1){
 
-		return false;
-	}
+        return false;
+    }
 
-	return isEven(a-2);
+    return isEven(a-2);
 }
   	
  console.log(isEven(50));/*true*/
@@ -109,22 +110,23 @@ function isEven(a) {
 
  function isEven(a) {	
 	
-    if (a < 0) {
+      if (a < 0) {
 
-            return isEven(a+2);
+          return isEven(a+2);
 
 	   } else if (a === 0) {
 
-		  return true;
+	       return true;
 
-	   } 
-    if (a === 1){
+	   }
 
-		  return false;
+      if (a === 1){
+
+	       return false;
 	   }
 
 	   return isEven(a-2);
-}
+  }
   	
  console.log(isEven(50));/*true*/
  console.log(isEven(75));/*false*/
