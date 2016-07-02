@@ -3,7 +3,7 @@
     var nums = [];
     for (var j = 0; j < 3; j++){
        var num = prompt('Число от 0 до 256');
-        
+
           while (num < 0 || num > 255){
                 num = prompt('Число от 0 до 256');
           }
@@ -39,6 +39,21 @@ console.log(colorToHex());
   console.log(convertNum()); 
 
 
-
-
+ // Написать функцию toQueryString(obj), которая принимает аргументом объект и возвращает строку.
  
+user = {firstName: 'Dmitry', lastName: 'Bondarchuk', birthDay: '16.07.1990', phones: ['89001234567', '83431234567']};
+ 
+function toQueryString(user) {
+    var str = "";
+  
+    for (var i in user){
+        if (!true) {
+         str += " ;";
+       }
+        str += i + ": " + user[i];
+        
+    }
+    return str;
+}
+str = toQueryString({});
+console.log(str);
