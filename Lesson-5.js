@@ -28,6 +28,9 @@ console.log(colorToHex());
   var  convertNum = function (){
 
       var char = prompt();
+      if (char > 999){
+       char = prompt('Вы ввели слишком большое число,надо не больше 999');
+     }
       var newchar = char.split('').reverse();    
 
       var num = {};
