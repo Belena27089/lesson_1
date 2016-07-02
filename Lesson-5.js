@@ -51,9 +51,9 @@ function toQueryString(user) {
   
     for (var i in user){
         if (!true) {
-         str += " ;";
+         str += "&";
        }
-        str += i + ": " + user[i];
+        str += i + "=" + user[i];
         
     }
     return str;
