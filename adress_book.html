@@ -1,32 +1,45 @@
+
+
 <meta charset="UTF-8">
 <script >
 // User storage
-	
+  
   var users = [];
- //      users = [
-	// {
-	// 	firstName: 'Dmitry',
-	// 	lastName: 'Bondarchuk',
-	// 	birthDay: '16.07.1990',
-	// 	phones: [
-	// 		'89001234567',
-	// 		'83431234567'
-	// 	] 
-	// },
-	// {
-	// 	firstName: 'Ivan',
-	// 	lastName: 'Petrov',
-	// 	birthDay: '08.06.1956',
-	// 	phones: [
-	// 		'89001234567',
-	// 		'83431234567'
-	// 	] 
-	// }
- //  ];
+      users = [
+  {
+    id: 1,
+    firstName: 'Dmitry',
+    lastName: 'Bondarchuk',
+    birthDay: '16.07.1990',
+    phones: [
+      '89001234567',
+      '83431234567'
+    ] 
+  },
+  {
+    id: 2,
+    firstName: 'Ivan',
+    lastName: 'Petrov',
+    birthDay: '08.06.1956',
+    phones: [
+      '89001234567',
+      '83431234567'
+    ] 
+  }
+  ];
 
-  // var user = {};
-  function getUser() {    
-    var user = {};
+ 
+// функция добавления пользователя
+   
+ 
+  function addUser(users) {
+
+    var user = {}; 
+  
+    var maxId = users.reduce(function(prev,cur) {
+      return cur.id > prev.id ? cur : prev;
+      });
+    user.id = maxId.id + 1; 
     user.firstName = prompt ('Имя:');    
     user.lastName = prompt ('Фамилия:');    
     user.birthDay = prompt ('Дата рождения:');
@@ -35,19 +48,45 @@
       for (var j = 0; j < 2; j++){
           
       user.phones.push (user.phone = prompt ('Телефон:'));
-      }
-      return user
+      }     
+  
+   
+      users.push(user);
+ }
+  
 
-  }
-
-    user = getUser();
-    users.push(user);
- 
 
   for (var r = 0; r < users.length; r++){
 
-      console.log('Пользователь'+ (r+1) + '\n' + 'Имя:'+ ' ' + "'" + users[r].firstName + "'" + ',', '\n'+'Фамилия:'+ ' ' + "'" +users[r].lastName + "'" + ',', '\n' + 'Дата рождения:'+ ' ' + "'" + users[r].birthDay + "'" + ',','\n' + 'Телефоны:'+ "'" + users[r].phones.join(+' ' + ' ,\n  ') + "'");
+      console.log('id:'+ ' ' + users[r].id  + ',', '\n'+ 'Имя:'+ ' ' + "'" + users[r].firstName + "'" + ',', '\n'+'Фамилия:'+ ' ' + "'" +users[r].lastName + "'" + ',', '\n' + 'Дата рождения:'+ ' ' + "'" + users[r].birthDay + "'" + ',','\n' + 'Телефоны:'+ "'" + users[r].phones.join(+' ' + ' ,\n  ') + "'");
 
   }
+   // функция удаления пользователя
+  
+  function deleteUser(id) {
+      
+   
+      return users.filter(function (user) {  
+          return user.id != id}) ;
+  }
+
+
+  console.log(deleteUser(1));
+
+
+
+  // функция вывода массива пользователей в csv формате
+  
+  function csvFormat(users) {
+    return users.map(function(user) {
+      return Object.keys(user).map(function(key) { 
+            if(typeof user[key] == 'string' || typeof user[key] == 'number')
+               return '"' + user[key] + '"'; 
+            else return user[key].map(function(phone) { return '"' + phone + '"'; }).join(';');
+            }).join(';');
+    }).join('\r\n');
+  }
+
+
 
 </script>
