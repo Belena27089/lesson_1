@@ -10,7 +10,7 @@
     //       }
     //        nums.push(num);
     // } 
-  var colorToHex = function () {   
+  var colorToHex = function (nums) {   
     var numtoString = nums.map(function(num) {   
     
       return (num < 10 && num >= 0) ? (0 + parseInt(num).toString(16)) : parseInt(num).toString(16);
@@ -19,9 +19,7 @@
   return numtoString = '#' + numtoString.join('');
 } 
 
-console.log(colorToHex());
-
- 
+console.log(colorToHex([255,255,255]));
 
 // Функция, преобразующую число в объект 
 
@@ -30,9 +28,9 @@ console.log(colorToHex());
      //  if (char > 999){
      //   char = prompt('Вы ввели слишком большое число,надо не больше 999');
      // }
-     var  convertNum = function (){
+     var  convertNum = function (char){
 
-      var newchar = char.split('').reverse();    
+      var newchar = char.toString().split('').reverse();    
 
       var num = {};
       num['единицы'] = newchar[0]; 
@@ -41,12 +39,28 @@ console.log(colorToHex());
       return num;
   }
     
-  console.log(convertNum()); 
+  console.log(convertNum(566)); 
+
+
+
+  var  convertNum = function(char){
+      var num = ['единицы','десятки','сотни'];
+      var newchar = char.toString().split('').reverse();
+      result = {};
+      for (var i = 0; i < newchar.length;i++) {
+
+        result[num[i]] = newchar[i];
+      }
+  return result;
+  }
+
+  console.log(convertNum(677))
+ 
 
 
  // Написать функцию toQueryString(obj), которая принимает аргументом объект и возвращает строку.
  
-user = {firstName: 'Dmitry', lastName: 'Bondarchuk', birthDay: '16.07.1990', phones: ['89001234567', '83431234567']};
+user = {firstName: 'Dmitry', lastName: 'Bon darchuk', birthDay: '16.07.1990', phones: ['89001234567', '83431234567']};
  
  
 function toQueryString(user) {
