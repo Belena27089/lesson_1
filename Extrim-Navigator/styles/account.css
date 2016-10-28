@@ -1,0 +1,73 @@
+body {
+  background-image: none;
+}
+.main-content__account {
+  overflow: hidden;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.main-content__account h1 {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  margin-top: 110px;
+}
+
+.main-content__account-login,
+.main-content__account-registration {
+  float: left;
+  width: 500px;
+  padding: 0 50px;
+}
+
+.main-content__account-registration {
+  border-left: 1px solid #cccccc;
+}
+
+.main-content__account h2 {
+  margin-bottom: 30px;
+}
+
+.main-content__account label {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.main-content__account input {
+  width: 400px;
+  height: 50px;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  padding: 0 10px;
+  background-color: #eeeeee;
+  border: 2px solid #eeeeee;
+}
+
+.main-content__account input:focus {
+  background-color: #ffffff;
+  border: 2px solid #F2908C;
+}
+
+.main-content__account input[type="submit"] {
+  display: block;
+  width: 200px;
+  height: 40px;
+  font-size: 18px;
+  background-color: #F2908C;
+  border: 2px solid #1b1b1b;
+}
+
+.main-content__account input[type="submit"]:hover {
+  color: #F2908C;
+  background-color: #1b1b1b;
+}
+
+.main-content__account input[type="submit"]:active {
+  color: #F2908C;
+  background-color: #66a72f;
+}
+

@@ -1,0 +1,411 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>Extreme Navigator - Добавление нового экстремального места</title>
+  <meta name="description" content="EXTREME NAVIGATOR – путеводитель  для любителей экстремального спорта и отдыха. На карте вы найдете самые экстремальные места. Присоединяйтесь к миру экстрима!">
+  <meta name="keywords" content="сайт экстрим самые экстремальные любители мир карта спорт место необычный">
+  <link rel="shortcut icon" href="img/logos/favicon.ico">  
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/place.css">
+  <link rel="stylesheet" href="font-awesome-4.6.1/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=cyrillic" rel="stylesheet">
+</head>
+  <body>
+    <div class="wrapper">
+      <div class="page">   
+         <header class="page-header">
+          <div id="white"></div>
+          <div class="page-header-container">                        
+            <div id="header-nav">
+                <!-- фильтр города -->
+                <div class="choose-container">
+                  <div id="current-lang">       
+                    <span>Город</span>
+                  </div>
+                  <div id="store-selector">
+                    <div class="container">
+                      <div class="form-container">                   
+                        <div class="select-container">
+                          <span class="current">
+                            Выбрать Город</span>
+                          <div class="list-container" style="">
+                            <ul>
+                              <li>
+                                <a href="#">
+                                    Орёл
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                    Красноярск
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                            Москва
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                            Санкт-Петербург
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                            Новосибирск
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                            Омск
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                            Пенза
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                            Воронеж
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#" >
+                                            Ярославль
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                           Владивосток
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                            Норильск
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>         
+                  </div>
+                </div>
+                <!-- конец фильтра города -->
+                <!-- фильтр категории -->
+                <div class="choose-container">
+                  <div id="current-lang">       
+                  <span>Категория</span>                 
+                  </div>
+                  <div id="store-selector">
+                    <div class="container">
+                      <div class="form-container">                   
+                        <div class="select-container">
+                          <span class="current">Выбрать категорию экстрима</span>             
+                          <div class="list-container" style="">
+                            <ul>
+                            <li>
+                                <a href="#">
+                                    Необычные и экстрим места
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                    Экстремальные путешествия
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                  Аквабайк
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                   Альпинизм         
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                  Вейкбординг              
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                  Виндсерфинг          
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                   Водные лыжи       
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                    Дайвинг      
+                                </a>
+                              </li>  
+                              <li>
+                                <a href="#">
+                                    Дельтапланеризм      
+                                </a>
+                              </li>  
+                              <li>
+                                <a href="#">
+                                    Кайтсерфинг      
+                                </a>
+                              </li>  
+                              <li>
+                                <a href="#">
+                                    Каякинг      
+                                </a>
+                              </li>  
+                              <li>
+                                <a href="#">
+                                    Лыжный спорт и катание      
+                                </a>
+                              </li>  
+                              <li>
+                                <a href="#">
+                                    Маунтинбайкинг      
+                                </a>
+                              </li>  
+                              <li>
+                                <a href="#">
+                                    Парашютизм      
+                                </a>
+                              </li>  
+                              <li>
+                                <a href="#">
+                                     Рафтинг     
+                                </a>
+                              </li>  
+                              <li>
+                                <a href="#">
+                                   Серфинг       
+                                </a>
+                              </li>  
+                               <li>
+                                <a href="#">
+                                   Скайсерфинг
+                                </a>
+                              </li>  
+                              <li>
+                                <a href="#">
+                                   Скалолазание
+                                </a>
+                              </li>  
+                              <li>
+                                <a href="#">
+                                   Сноуборд
+                                </a>
+                              </li> 
+                               <li>
+                                <a href="#">
+                                   Спелестология
+                                </a>
+                              </li>
+                               <li>
+                                <a href="#"> 
+                                Яхтинг
+                               </a>
+                              </li>                     
+                            </ul>
+                          </div>
+                        </div>
+                      </div>                    
+                    </div>
+                  </div> 
+                </div>
+                <!-- конец фильтра категории -->
+                <!-- фильтр рейтинг -->
+                <div class="choose-container">
+                <div id="current-lang">       
+                  <span>Рейтинг</span>                  
+                </div>
+                <div id="store-selector">
+                  <div class="container">
+                    <div class="form-container">                     
+                      <div class="select-container">
+                        <span class="current"></span>                
+                        <div class="list-container" style="">
+                          <ul>
+                            <li>
+                                <a href="#">
+                                    отлично
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                   очень хорошо
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">                         
+                                </a>
+                            </li>                            
+                          </ul>
+                        </div>
+                      </div>
+                    </div>                   
+                  </div>
+                </div> 
+              </div>
+              <!-- конец фильтра рейтинг -->
+              <!-- фильтр по дате добавления -->
+              <div class="choose-container">
+                <div id="current-lang">       
+                  <span>Дата  добавления</span>
+                  
+                </div>
+                <div id="store-selector">
+                  <div class="container">
+                    <div class="form-container">                     
+                      <div class="select-container">
+                        <span class="current" data-countrycode="">
+                          Выбрать дату</span>
+                        <div class="list-container" style="">
+                          <ul>
+                            <li>
+                                <a href="#"> 
+                                </a>
+                            </li>
+                            
+                          </ul>
+                        </div>
+                      </div>
+                    </div>                   
+                   
+                  </div>
+                </div> 
+              </div>
+              <!-- конец фильтра по дате добавления -->
+            </div>
+              <div class="links">
+                <div class="account-wrapper">
+                  <a href="account.html" class="header-link header-login">
+                    <span class="label">Личный кабинет</span>
+                </a>
+                 <a href="account.html" class="header-link header-login">
+                    <span class="label">Регистрация</span>
+                </a>
+                </div>
+              </div>
+              <div class="links">
+                <div class="place-wrapper">
+                  <a href="place.html" class="header-link header-place">
+                    <span class="label">Добавить экстремальное место</span>
+                  </a>
+                </div>
+              </div>
+              <a class="logo" href="index.html" title="Cайт для любителей экстрима Extrem Navigator">
+                <div class="logo-container"></div>
+              </a>                       
+          </div>          
+        </header>
+  <section class="main-content">
+    <div class="container">
+      <div class="main-content__place">
+        <h2>Новое экстремальное место</h2>
+        <h3>Информация о месте</h3>
+        <form>
+          <label for="place-name">Название места *</label>
+          <input id="place-name" type="text" name="place-name">
+          <label for="place-description">Описание места *</label>
+          <textarea id="place-description" name="place-description"></textarea>
+          <label for="category">Категория*</label>
+          <input id="category" type="text" name="category">
+          <label for="city">Город*</label>
+          <input id="city" type="text" name="city">
+          <label for="coordinates">Координаты*</label>
+          <input id="coordinates" type="text" name="coordinates">
+          <label for="place-photo">Фотографии места *</label>
+          <input id="place-photo" type="file" name="place-photo">
+          <input id="place-photo" type="file" name="place-photo">
+          <input id="place-photo" type="file" name="place-photo">
+          <input id="place-photo" type="file" name="place-photo">
+          <input type="submit" name="place-submit" value="Добавить">
+        </form>
+      </div>
+    </div>
+  </section>
+ <div class="footer-container">
+  <div></div>
+    <div class="footer">        
+        <div class="actions">
+            <button type="submit" title="Subscribe" class="button">
+            <span><span>Ещё больше историй</span></span>
+            </button>
+        </div>
+        <div id="menu-footer">
+          <h3 class="footer-title">Наш сайт – некоммерческий проект, задуман, как каталог экстремальных мест, где любители экстремального отдыха или экстремального спорта могут найти интересные места где можно экстремально провести время. Ищите на карте нужный маркер или в каталоге выберите вид экстрима.</h3>
+            <b> Сейчас здесь представлена лишь малая часть мест для экстремального отдыха. Мы развиваем наш проект и приглашаем всех поделится своими любимыми местами для экстрима!</b>
+            <div class="links-footer">          
+              <ul>
+                <li><a href="#">Свяжитесь с нами</a></li> 
+                <li><a href="privacy-policy.html">Политика Конфиденциальности</a></li>                
+              </ul>
+            </div>   
+    
+            <div class="links-footer last">        
+              <ul>                
+                <li><a href="account.html">Зарегистрируйтесь</a></li>
+                <li><a href="account.html">Личный кабинет</a></li>           
+              </ul>
+            </div>
+        </div>
+        <div id="social-footer" class="social">
+          <h3 class="footer-title">Ищите нас в социальных сетях</h3>
+            <ul>
+              <li>
+                <a href="https://www.facebook.com" title="" alt="" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://instagram.com" title="" alt="" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com" title="" alt="" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>
+              </a>
+              </li>
+              <li>
+                <a href="https://vk.com" title="" alt="" target="_blank"><i class="fa fa-vk" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
+        </div>
+        
+ 
+        <address class="copyright">
+          © 
+          <script type="text/javascript">
+            var d = new Date();
+            document.write(d.getFullYear())
+          </script>
+          <b>EXTRIM NAVIGATOR</b> - сайт о местах для экстремальных путешествий и экстремального спорта
+            <a class="logo-footer" href="index.html" title="Экстрим-сайт о местах для экстремальных путешествий и экстремального спорта.">
+              <img src="img/logos/logo2-01.png" alt="extrem_navigator" class="large"alt="Экстрим-сайт о местах для экстремальных путешествий и экстремального спорта." />
+            </a>
+          </address>
+        </div>
+      </div>
+    </div>
+  </div> 
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+ <script>  
+    $(window).scroll(function() {
+      if ($(this).scrollTop() > 11){
+        $('header').addClass("fixed");
+    }
+      else{
+        $('header').removeClass("fixed");
+          }
+    });
+  </script>  
+  </body>
+</html>
