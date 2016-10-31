@@ -92,4 +92,14 @@ tab.style.border = '2px solid';
 tab.style.margin = '32px';
 tab.style.borderCollapse ='collapse';
 return newCell;
+
+
+var td = document.getElementsByTagName('td');
+td.onclick = function() {
+  for (var i = 0; i < td.length; i++) {
+
+      newCell[i].style.backgroundColor = 'red';
+  // td[i].style.backgroundColor = 'red';
+  }
+ }
 }
