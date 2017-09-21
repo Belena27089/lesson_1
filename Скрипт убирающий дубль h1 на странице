@@ -1,0 +1,16 @@
+$(document).ready(function(){
+  $('.unvisible').find('h1').replaceWith(function(index, oldHTML){
+  return $('<i>').html(oldHTML);
+});
+});
+
+$(document).on('click', '.lnk_more', function(e){
+	e.preventDefault();
+	$('#category_description_short').remove(); 
+	$('#category_description_full').removeClass('unvisible').addClass('visible'); 
+        $('.visible').find('i').replaceWith(function (index, oldHTML){
+                                            return $('<h1>').html(oldHTML);
+                                        });                                   
+	$('#category_description_full').show(); 
+	$(this).hide();
+});
