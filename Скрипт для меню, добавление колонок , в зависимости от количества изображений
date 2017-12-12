@@ -1,0 +1,30 @@
+ var lis = document.querySelector('.sf-menu').children;
+        for (i = 0; i < lis.length; i++) {
+// получить количество детей
+            var childUl = lis[i].querySelectorAll('ul');
+            var childCountUl = childUl.length;
+            for (j = 0; j < childCountUl; j++) {
+                var countImg = childUl[0].getElementsByTagName('img').length;
+                var childCountLi = childUl[0].children.length;               
+
+                if (countImg >= 1 && childCountLi <= 4) {
+                    childUl[0].className = 'bigTab';
+                }
+                if (countImg <= 3 && childCountLi == 5) {
+                    childUl[0].className = 'bigLageTab';
+
+                }
+                if (countImg == 4 && childCountLi <= 5) {
+                    childUl[0].className = 'bigXLageTab';
+
+                }
+                if (childCountLi >= 7) {
+                    childUl[0].classList.add("noImg");               
+
+                }
+                if (countImg === 0) {
+                    childUl[0].className = 'noImg';
+                }
+              
+            }
+        }
