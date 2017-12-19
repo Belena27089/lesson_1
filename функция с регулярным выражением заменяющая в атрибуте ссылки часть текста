@@ -1,0 +1,12 @@
+
+ $(function() {
+	$('[rel="canonical"]').each(function() {  
+  	$(this).attr('href', 
+    	$(this).attr('href').replace(/[0-99]/g, '')
+    )
+    $(this).attr('href',
+      $(this).attr('href').replace('?p=', '')
+     )
+  })
+});
+      
