@@ -1,0 +1,14 @@
+<div class="col-sm-5">
+            <form autocomplete="off">                
+                <input id="city" class="form-control" type="text" name="city" value="{$city} {$region}" autocomplete="off"/>                
+            </form>
+        </div>        
+    </div>
+</div>
+{literal}<script>
+        $("#city").keypress(function (e) {
+            if (e.which == 13) {
+                return false;
+            }
+        });
+    </script>{/literal}    
