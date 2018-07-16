@@ -1,0 +1,8 @@
+{if $product->id ==1}
+                                                                    {literal}<script>$("button").click(function () {
+                                                                            setTimeout(function () {
+                                                                                location.href = "{/literal}{$link->getProductLink('5')|escape:'html':'UTF-8'}{literal}#head_column";
+                                                                            }, 500)
+                                                                        });
+                                                                        </script>{/literal}
+                                                                        {/if}
