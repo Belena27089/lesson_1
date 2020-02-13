@@ -1,0 +1,7 @@
+$pattern = array('"','[{','}]','{','}');
+ $product = str_replace($pattern, '', $product);
+ $product = str_replace('count', 'кол-во', $product);
+ $pattern1 = array('/id.*?e:/m','/image.*?jpg/m','/price.*?33/m');
+ $product = preg_replace($pattern1, '', $product);
+ 
+ [{"id":"89165","name":"Armani Mania Men 100 ml","image":"/catalog/Armani - Armani Mania Men 100 ml.jpg","count":1,"price":33}]
